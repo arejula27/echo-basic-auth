@@ -1,3 +1,4 @@
+// main is the entry point
 package main
 
 import (
@@ -24,8 +25,6 @@ func main() {
 
 	//Restricted paths
 	r := e.Group("/admin", middlewares.BasicAuth())
-
 	r.GET("", privateHandler)
-	e.Logger.Fatal(e.Start(":8000"))
 
 }
